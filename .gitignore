@@ -1,4 +1,5 @@
 ArchiveDiff.iml
-bin
-eggs
 .idea
+*.pyc
+*.pyo
+
