@@ -1,0 +1,4 @@
+Markdown
+Pygments
+-e svn+http://code.djangoproject.com/svn/django/trunk#egg=Django
+-e git://github.com/ask/celery.git#egg=celery

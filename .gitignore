@@ -2,4 +2,4 @@ ArchiveDiff.iml
 .idea
 *.pyc
 *.pyo
-
+pip-log.txt
