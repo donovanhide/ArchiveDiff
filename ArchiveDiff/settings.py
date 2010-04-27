@@ -1,6 +1,10 @@
 # Django settings for ArchiveDiff project.
 
-WARC_DIR = "/home/donovan/IdeaProjects/ArchiveDiff/ArchiveDiff/data"    
+import os
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+
+WARC_DIR = os.path.join(ROOT_PATH,"/src/data")
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -25,7 +29,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'doj.backends.zxjdbc.postgresql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_ENGINE = 'postgresql_psycopg2'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'archivediff'             # Or path to database file if using sqlite3.
 DATABASE_USER = 'archivediff'             # Not used with sqlite3.
 DATABASE_PASSWORD = 'archivediff'         # Not used with sqlite3.
@@ -83,7 +87,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'ArchiveDiff.urls'
 
 TEMPLATE_DIRS = (
-                 "/home/donovan/IdeaProjects/ArchiveDiff/ArchiveDiff/templates"
+                 os.path.join(ROOT_PATH,"/src/templates")
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
