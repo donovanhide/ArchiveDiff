@@ -1,8 +1,3 @@
-import os,glob,sys
-
-for jar in glob.glob(os.path.join('/home/donovan/IdeaProjects/ArchiveDiff/lib', '*.jar')):
-    sys.path.append(jar)
-
 # Django settings for ArchiveDiff project.
 
 WARC_DIR = "/home/donovan/IdeaProjects/ArchiveDiff/ArchiveDiff/data"    
@@ -100,7 +95,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'doj',
     'indexer',
-    'debug_toolbar', 
+    'debug_toolbar',
 )
