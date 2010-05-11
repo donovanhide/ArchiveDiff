@@ -3,3 +3,4 @@ ArchiveDiff.iml
 *.pyc
 *.pyo
 pip-log.txt
+ArchiveDiff/data

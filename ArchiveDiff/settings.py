@@ -3,11 +3,14 @@
 import os
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
+WARC_DIR = os.path.join(ROOT_PATH,"data")
 
-WARC_DIR = os.path.join(ROOT_PATH,"/src/data")
+INDEXER_DIR = '/home/donovan/NetBeansProjects/ArchiveIndexer/src/'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+#Debug Toolbar stuff
 INTERNAL_IPS = ('127.0.0.1',)
 
 DEBUG_TOOLBAR_PANELS = (
@@ -21,6 +24,15 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.signals.SignalDebugPanel',
     'debug_toolbar.panels.logger.LoggingPanel',
 )
+
+
+#Celery stuff
+CELERY_RESULT_BACKEND = "database"
+BROKER_HOST = "localhost"
+BROKER_PORT = 5672
+BROKER_USER = "archivediff"
+BROKER_PASSWORD = "archivediff"
+BROKER_VHOST = "archivediff"
 
 
 ADMINS = (
@@ -87,7 +99,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'ArchiveDiff.urls'
 
 TEMPLATE_DIRS = (
-                 os.path.join(ROOT_PATH,"/src/templates")
+                 os.path.join(ROOT_PATH,"templates")
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -101,4 +113,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'indexer',
     'debug_toolbar',
+    'celery',
 )

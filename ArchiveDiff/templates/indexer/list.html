@@ -1,4 +1,6 @@
 <h1>WARC's</h1>
+<ul>
 {% for warc in warcs %}
-    <a href="process?path={{ warc }}">{{warc}}</a>
+    <li><a href="process/?warc_path={{ warc }}">{{warc}}</a></li>
 {% endfor %}
+</ul>

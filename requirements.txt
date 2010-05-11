@@ -1,7 +1,9 @@
 Markdown
 Pygments
+redis
+fabric
 http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz
 
 -e svn+http://code.djangoproject.com/svn/django/trunk#egg=Django
--e git://github.com/ask/celery.git#egg=celery
+-e git://github.com/ask/celery.git@v1.0.2#egg=celery
 -e git://github.com/robhudson/django-debug-toolbar#egg=django-debug-toolbar
