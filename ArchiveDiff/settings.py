@@ -46,7 +46,7 @@ DATABASE_NAME = 'archivediff'             # Or path to database file if using sq
 DATABASE_USER = 'archivediff'             # Not used with sqlite3.
 DATABASE_PASSWORD = 'archivediff'         # Not used with sqlite3.
 DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = '5433'             # Set to empty string for default. Not used with sqlite3.
+DATABASE_PORT = '5432'             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
