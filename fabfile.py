@@ -16,12 +16,14 @@ def test():
         abort("Aborting at user request.")
 
 def setup():
+    with cd('/srv'):
+        sudo('rm -Rf /srv/ArchiveDiff')
+        sudo('git clone git://github.com/donovanhide/ArchiveDiff.git')
     with cd('/srv/ArchiveDiff'):
-        sudo('build.sh')
+        sudo('./build.sh')
         
 def deploy():
-    put('/tmp/archivediff.tgz', '/tmp/')
-    with cd('/srv'):
-        sudo('git clone git://github.com/donovanhide/ArchiveDiff.git')
+    with cd('/srv/ArchiveDiff'):
+        sudo('git pull')
     restart_webserver()
 
