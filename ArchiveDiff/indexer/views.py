@@ -6,7 +6,6 @@ import os,glob, datetime
 from models import *
 
 def list(request):
-    print tasks
     warcs = []
     for warc in glob.glob(os.path.join(settings.WARC_DIR, '*.warc.gz')):
         warcs.append(warc)
