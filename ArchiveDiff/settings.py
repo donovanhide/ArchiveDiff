@@ -111,7 +111,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'indexer',
+    'ArchiveDiff.indexer',
     'debug_toolbar',
     'celery',
 )
