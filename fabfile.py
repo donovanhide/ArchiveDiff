@@ -19,11 +19,15 @@ def setup():
     with cd('/srv'):
         sudo('rm -Rf /srv/ArchiveDiff')
         sudo('git clone git://github.com/donovanhide/ArchiveDiff.git')
+        sudo('rm -Rf /srv/ArchiveIndexer')
+        sudo('git clone git://github.com/donovanhide/ArchiveIndexer.git')
     with cd('/srv/ArchiveDiff'):
         sudo('./build.sh')
         
 def deploy():
     with cd('/srv/ArchiveDiff'):
+        sudo('git pull')
+    with cd('/srv/ArchiveIndexer'):
         sudo('git pull')
     restart_webserver()
 
