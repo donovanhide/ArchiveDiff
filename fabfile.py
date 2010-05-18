@@ -31,3 +31,4 @@ def deploy():
         sudo('git pull')
     restart_webserver()
 
+

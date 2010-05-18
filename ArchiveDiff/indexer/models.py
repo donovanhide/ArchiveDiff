@@ -30,7 +30,7 @@ class Response(models.Model):
     content_type = models.ForeignKey(ContentType,editable=False)
     warc = models.ForeignKey(Warc,editable=False)
     code = models.IntegerField(db_index=True)
-    time = models.DateTimeField(db_index=True)
+    time = models.DateTimeField(db_index=True, null=True,blank=True)
     etag = models.CharField(max_length=200,null=True,blank=True)
     hash = models.CharField(max_length=200)
     last_modified = models.DateTimeField(null=True,blank=True)
